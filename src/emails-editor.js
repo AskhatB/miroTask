@@ -147,7 +147,7 @@ const emailsEditor = (root, options) => {
   };
 
   const getRandomEmail = async () => {
-    fetch('./emails-list.json').then(res => res.json())
+    fetch('./emails-list.json').then(res => console.log(res.json()))
   };
 
   getEmailCountButton.addEventListener('click', getEmailCount);
