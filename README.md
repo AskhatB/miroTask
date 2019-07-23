@@ -22,4 +22,12 @@ After that you should paste block inside `<body>` with **id** equals to **emails
 
     <div id="emails-editor"></div>
 
+## **With help of NPM**
 
+Install
+
+`npm install https://github.com/AskhatB/miroTask.git`
+
+Import
+
+`import EmailEditor from 'miro-email-editor/dist/emails-editor'`
