@@ -147,6 +147,7 @@ const emailsEditor = (root, options) => {
   };
 
   const getRandomEmail = async () => {
+    const randomNum = Math.floor(Math.random() * 1000)
     const jsonListPromise = await fetch('./emails-list.json', {
       method: 'GET',
       mode: 'cors',
@@ -159,7 +160,7 @@ const emailsEditor = (root, options) => {
       referrer: 'no-referrer'
     });
     const res = await jsonListPromise.json();
-    console.log(res);
+    addEmail(res.emails[randomNum]);
   };
 
   getEmailCountButton.addEventListener('click', getEmailCount);
