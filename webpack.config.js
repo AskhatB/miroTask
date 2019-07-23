@@ -38,11 +38,5 @@ module.exports = {
       filename: '[name].min.css',
       chunkFilename: '[id].min.css'
     })
-  ],
-  node: {
-    dns: 'mock',
-    fs: 'empty',
-    path: true,
-    url: false
-  }
+  ]
 };

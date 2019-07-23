@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack -p --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -p --config webpack.config.js --progress",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "npm install --dev"
   },
   "author": "Askhat",
   "license": "ISC",
