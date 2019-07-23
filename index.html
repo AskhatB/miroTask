@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Emails editor</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Emails editor</title>
+    <style>
+      body {
+        background: #f5f5f5;
+      }
+      .emails-editor__wrapper {
+        width: 520px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="emails-editor__wrapper">
+      <div id="emails-editor"></div>
+    </div>
+    <script src="dist/main.js"></script>
+    <script>
+      const options = {
+        title: 'Miro Task'
+      };
+      const container = document.querySelector('#emails-editor');
+      EmailsEditor.run(container, options);
+    </script>
+  </body>
 </html>
