@@ -148,17 +148,7 @@ const emailsEditor = (root, options) => {
 
   const getRandomEmail = async () => {
     const randomNum = Math.floor(Math.random() * 1000)
-    const jsonListPromise = await fetch('./emails-list.json', {
-      method: 'GET',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      redirect: 'follow',
-      referrer: 'no-referrer'
-    });
+    const jsonListPromise = await fetch('./emails-list.json');
     const res = await jsonListPromise.json();
     addEmail(res.emails[randomNum]);
   };
